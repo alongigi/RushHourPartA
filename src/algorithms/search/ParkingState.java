@@ -1,7 +1,7 @@
 package algorithms.search;
 
 /**
- * Created by Alon on 4/14/2017.
+ * Created by Alon on 01/03/2019.
  */
 import algorithms.parkingGenerators.*;
 
@@ -15,8 +15,13 @@ public class ParkingState extends AState {
     {
         super(new Parking(newParking));
         Parking p = new Parking(newParking);
-        System.out.println(newParking);
-        p.print();
+//        System.out.println(newParking);
+//        p.print();
+    }
+
+    public ParkingState(Position position)
+    {
+        super(new Parking(position.toString()));
     }
 
 
@@ -34,8 +39,13 @@ public class ParkingState extends AState {
 
     @Override
     public boolean equals(Object object) {
-        ParkingState mazeState = (ParkingState) object;
-        return toString().intern() == mazeState.toString().intern();
+        ParkingState parkingState = (ParkingState) object;
+//        return parkingState.toString().indexOf('A') == toString().indexOf('A');
+        if(parkingState.toString().equals("ooooooooooooooooAAoooooooooooooooooo") ||
+                toString().equals("ooooooooooooooooAAoooooooooooooooooo"))
+            return toString().indexOf('A') == parkingState.toString().indexOf('A');
+        return toString().intern() == parkingState.toString().intern();
+
     }
 
     @Override

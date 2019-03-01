@@ -4,37 +4,24 @@ package algorithms.parkingGenerators;
  * Created by Alon on 03/02/2019.
  */
 public class Position {
-    protected int row;
-    protected int column;
+    String position;
 
-    public Position(int row, int column) {
-        this.row = row;
-        this.column = column;
-    }
-
-
-    public int getRowIndex()
-    {
-        return row;
-    }
-
-    public int getColumnIndex()
-    {
-        return column;
+    public Position(String position) {
+        this.position = position;
     }
 
     public String toString() {
-        return "{" + getRowIndex() + "," + getColumnIndex() + "}";
+        return position;
     }
 
     @Override
     public boolean  equals (Object object) {
         Position pos = (Position) object;
-        return  pos.getColumnIndex() == column && pos.getRowIndex() == row;
+        return  pos.equals(position);
     }
 
     @Override
     public int hashCode() {
-        return ("" + row).hashCode() + ("" + column).hashCode();
+        return position.hashCode();
     }
 }

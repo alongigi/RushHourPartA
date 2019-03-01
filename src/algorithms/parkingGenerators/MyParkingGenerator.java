@@ -18,6 +18,7 @@ public class MyParkingGenerator extends AParkingGenerator {
         }catch (Exception e){
             e.printStackTrace();
         }
+        System.out.println(newParking);
         return new Parking(newParking);
     }
 }

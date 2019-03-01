@@ -5,17 +5,10 @@ import java.util.HashSet;
 import java.util.Stack;
 
 /**
- * Created by Alon on 4/14/2017.
+ * Created by Alon on 01/03/2019.
  */
 public class DepthFirstSearch extends ASearchingAlgorithm {
 
-
-    /**
-     * Finds and returns a path between the start state to the goal state by using depth first search.
-     *https://en.wikipedia.org/wiki/Depth-first_search
-     * @param domain the searchable.
-     * @return a path between the start state to the goal state by using depth first search.
-     */
     @Override
     public Solution solve(ISearchable domain) {
         Solution solution = new Solution();

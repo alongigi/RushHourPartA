@@ -1,5 +1,9 @@
 package algorithms.search;
 
+/**
+ * Created by Alon on 01/03/2019.
+ */
+
 public abstract class AState <T> {
     protected T state;
     protected T Parent;

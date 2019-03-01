@@ -12,7 +12,6 @@ public class RunSearchOnParking {
         SearchableParking searchableParking = new SearchableParking(parking);
         solveProblem(searchableParking, new BreadthFirstSearch());
         solveProblem(searchableParking, new DepthFirstSearch());
-        solveProblem(searchableParking, new BestFirstSearch());
     }
 
     private static void solveProblem(ISearchable domain, ISearchingAlgorithm searcher) {
