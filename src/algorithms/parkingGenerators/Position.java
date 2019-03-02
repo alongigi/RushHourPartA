@@ -10,6 +10,10 @@ public class Position {
         this.position = position;
     }
 
+    /**
+     * returns a description of position.
+     * @return a description of position.
+     */
     public String toString() {
         return position;
     }

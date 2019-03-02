@@ -15,8 +15,6 @@ public class ParkingState extends AState {
     {
         super(new Parking(newParking));
         Parking p = new Parking(newParking);
-//        System.out.println(newParking);
-//        p.print();
     }
 
     public ParkingState(Position position)
@@ -40,17 +38,14 @@ public class ParkingState extends AState {
     @Override
     public boolean equals(Object object) {
         ParkingState parkingState = (ParkingState) object;
-//        return parkingState.toString().indexOf('A') == toString().indexOf('A');
-        if(parkingState.toString().equals("ooooooooooooooooAAoooooooooooooooooo") ||
-                toString().equals("ooooooooooooooooAAoooooooooooooooooo"))
+        String goal = "ooooooooooooooooAAoooooooooooooooooo";
+        if(parkingState.toString().intern() == goal.intern() || toString().intern() == goal.intern())
             return toString().indexOf('A') == parkingState.toString().indexOf('A');
         return toString().intern() == parkingState.toString().intern();
-
     }
 
     @Override
     public int hashCode() {
         return toString().hashCode();
     }
-
 }
