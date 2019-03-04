@@ -3,7 +3,7 @@ import java.net.*;
 import java.io.*;
 
 /**
- * Created by אלון on 21/01/2019.
+ * Created by Alon on 03/02/2019.
  */
 public class MyParkingGenerator extends AParkingGenerator {
     /**
@@ -32,6 +32,6 @@ public class MyParkingGenerator extends AParkingGenerator {
      */
     @Override
     public String getName() {
-        return null;
+        return "MyParkingGenerator";
     }
 }

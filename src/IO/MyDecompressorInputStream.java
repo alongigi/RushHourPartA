@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by אלון on 02/03/2019.
+ * Created by Alon on 02/03/2019.
  */
 public class MyDecompressorInputStream extends InputStream {
     InputStream in;
@@ -42,7 +42,7 @@ public class MyDecompressorInputStream extends InputStream {
                 if (c == -1) {
                     break;
                 }
-                while(c-- > 0 && fileCursor <= 35) {
+                while(c-- > 0) {
                     toByteArray[off + fileCursor++] = (byte) putChoice;
                 }
 
@@ -57,6 +57,8 @@ public class MyDecompressorInputStream extends InputStream {
     }
 
     private int getParkingInfo(byte[] toByteArray,int fileCursor){
+
+        fileCursor =  readInfo(toByteArray,fileCursor);
 
 //        fileCursor = getParkingRowSizeData(toByteArray,fileCursor);
 //        fileCursor = getParkingColumnSizeData(toByteArray,fileCursor);
