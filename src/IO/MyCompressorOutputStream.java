@@ -27,7 +27,7 @@ public class MyCompressorOutputStream extends OutputStream {
     }
 
     public static byte[] compress(byte[] b){
-
+        
 //        List<Byte> listCompressedData = new ArrayList<>();
 //
 //        int fileCursor = putRowSizeData(listCompressedData,b);
