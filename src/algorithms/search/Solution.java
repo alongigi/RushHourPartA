@@ -13,6 +13,10 @@ public class Solution {
         this.solution = new ArrayList<AState>();
     }
 
+    public Solution(ArrayList<AState> solution) {
+        this.solution = solution;
+    }
+
     public void addState(AState state)
     {
         solution.add(state);
@@ -35,5 +39,9 @@ public class Solution {
         while(!solution.isEmpty()) {
             solution.remove(0);
         }
+    }
+
+    public ArrayList<AState> getSolution(){
+        return solution;
     }
 }
